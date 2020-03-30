@@ -3,6 +3,7 @@
 
 
 [What does each file do]
+
 There are three main Python files in this project:
 
 1) ArduinoController
@@ -15,4 +16,5 @@ This file
 
 
 [How do the files work with each other]
+
 get_leap_data acts as the main file. At the start of the script, it initialises the serial connection by calling the ArduinoController class. With the data received from the LEAP motion controller, these raw data are then parsed into the kinematics_calculations file to obtain the motor angles for each servo motor on the robot arm. These processed data is then written to an Arduino Uno. The Arduino Uno reads the data and writes the motor angles to the respective servos to move the robot arm.
