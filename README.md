@@ -1,24 +1,29 @@
-# Project-RASDOF
-[Moving a 6 DOF robot arm using hand gestures via a LEAP Motion Controller]
+# Project RASDOF
+A repository containing the files to move a 6DOF Robot Arm using the LEAP Motion Controller.
 
+## Version
+1.1
 
+## Project Report
+https://docs.google.com/document/d/17nsAcFaOkZNiIQ-9kArN_2-9rsQgJNsoiEjj_89Melo/edit#
 
+## Future Implementations
+- [ ] Add Bluetooth Capability
+- [ ] Add Websocket Capability
+- [ ] Replace current robot end effector with a robot hand
 
-1. [What does each file do]
+## Folders within the Repository
 
-There are three main Python files in this project:
+1. **Required Python Files 
+- Contains the necessary Python scripts to run LEAP Motion Controller.
 
-a) ArduinoController
-This file is a class that helps the user automatically determine what COM port the Arduino Uno is currently connected to. This class also includes standard functions for serial communication such as writing data, opening and closing the serial connection.
+2. **Python                            
+- Contains the Python scripts that needs modification if required.
 
-b) get_leap_data
-This file
+3. **Arduino               
+- Contains the Arduino scripts for servo caliberation and interfacing with the Python scripts through Serial Communication.
 
-c) kinematics_calculations
+4. **Project RASDOF v1.1 All in One
+- Contains the Arduino and Python folders. The Python folder contains the Python scripts and required Python files
 
-
-
-
-2. [How do the files work with each other]
-
-get_leap_data acts as the main file. At the start of the script, it initialises the serial connection by calling the ArduinoController class. With the data received from the LEAP motion controller, these raw data are then parsed into the kinematics_calculations file to obtain the motor angles for each servo motor on the robot arm. These processed data is then written to an Arduino Uno. The Arduino Uno reads the data and writes the motor angles to the respective servos to move the robot arm.
+To begin using the files, it is recommended to downloaded the Project RASDOF v1.1 All in One folder as the Python and Arduino Scripts are already in the correct directory.
